@@ -1,0 +1,23 @@
+{
+  "name": "RFXtrx WiFi Bridge",
+  "version": "1.1.0",
+  "slug": "rfxtrx_wifi_bridge",
+  "description": "Bridge RFXtrx TCP to serial",
+  "startup": "services",
+  "boot": "auto",
+  "host_network": true,
+  "privileged": [
+    "SYS_ADMIN"
+  ],
+  "devices": [
+    "/dev"
+  ],
+  "options": {
+    "host": "192.168.1.50",
+    "port": 10001
+  },
+  "schema": {
+    "host": "str",
+    "port": "int"
+  }
+}
