@@ -1,0 +1,36 @@
+{
+  "name": "RFXtrx WiFi Bridge PRO",
+  "version": "2.0.0",
+  "slug": "rfxtrx_wifi_bridge_pro",
+  "description": "WiFi bridge for RFXtrx with RF debug monitor, MQTT events and web interface",
+  "url": "https://github.com/dennissom/ha-addon-rfxtrx-pro",
+  "arch": [
+    "amd64",
+    "aarch64",
+    "armv7",
+    "armhf",
+    "i386"
+  ],
+  "startup": "services",
+  "boot": "auto",
+  "init": false,
+  "host_network": true,
+  "ports": {
+    "8099/tcp": 8099
+  },
+  "devices": [
+    "/dev"
+  ],
+  "options": {
+    "host": "192.168.1.50",
+    "port": 10001,
+    "mqtt_host": "core-mosquitto",
+    "mqtt_port": 1883
+  },
+  "schema": {
+    "host": "str",
+    "port": "int",
+    "mqtt_host": "str",
+    "mqtt_port": "int"
+  }
+}
