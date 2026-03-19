@@ -1,0 +1,29 @@
+{
+  "name": "RFXtrx TCP Bridge",
+  "version": "1.0.0",
+  "slug": "rfxtrx_tcp_bridge",
+  "description": "Stable TCP to serial bridge for WiFi connected RFXtrx devices",
+  "url": "https://github.com/dennissom/ha-addon-rfxtrx-stable",
+  "arch": [
+    "amd64",
+    "aarch64",
+    "armv7",
+    "armhf",
+    "i386"
+  ],
+  "startup": "services",
+  "boot": "auto",
+  "init": false,
+  "host_network": true,
+  "devices": [
+    "/dev"
+  ],
+  "options": {
+    "host": "192.168.1.50",
+    "port": 10001
+  },
+  "schema": {
+    "host": "str",
+    "port": "int"
+  }
+}
